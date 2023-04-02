@@ -83,8 +83,11 @@ Built with Python and lots of cat
 <br>
 <br>
 
-# issues
+# Issues
 
 | S.N | issue Name |
 | --- | --- |
-|1 | 
+|1 | AQI seems like a sphaghetti need  a bettr code|
+|2 | Not all city data is being fetched |
+| 3 | Add more functionalities related to weather |
+| 4| Integrate a backend? |
