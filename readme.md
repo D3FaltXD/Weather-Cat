@@ -34,8 +34,9 @@ Bot prefix is `!cat`
 
 # Demo
 
-<img src="images\webdemo.jpg">
-<img src="images\phone-website.png">
+<img src="image\functionality.png">
+<br><br>
+<img src="image\functionality-2.png">
 
 <br>
 <br>

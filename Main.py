@@ -6,7 +6,7 @@ from discord.ext import commands
 import messages
 
 token = 'MTA5MTk3NTM4NDA3MDg5NzY5NA.GQa8Ft.30UQ_SHSXKo5RBxj716FDBs0VqVKOC-bSNLBrs'
-api_key = ''
+api_key = 'b3c0c44ccc6b3c4e50d05d48b342e2b3'
 client = discord.Client(intents=discord.Intents.all())
 command_prefix = '!cat'
 
