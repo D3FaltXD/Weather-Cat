@@ -5,8 +5,8 @@ from weather import *
 from discord.ext import commands
 import messages
 
-token = 'MTA5MTk3NTM4NDA3MDg5NzY5NA.GclgWV.SBPAxAc8UY3CzIKKYiE8GYExhfhmo8_mhU-RGE'
-api_key = 'b3c0c44ccc6b3c4e50d05d48b342e2b3'
+token = 'Token goes here'
+api_key = 'Api Goes here'
 client = discord.Client(intents=discord.Intents.all())
 command_prefix = '!cat'
 
