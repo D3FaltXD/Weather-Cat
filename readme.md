@@ -27,7 +27,7 @@ Bot prefix is `!cat`
 - [Features](#Features)
 - [Installation](#Installation)
 - [Tech-Stack](#Tech-Stack)
-- [Project-References](#References)
+- [Issues](#References)
 
 <br>
 <br>
