@@ -5,14 +5,14 @@ from weather import *
 from discord.ext import commands
 import messages
 
-token = 'Token goes here'
-api_key = 'Api Goes here'
+token = 'MTA5MTk3NTM4NDA3MDg5NzY5NA.GQa8Ft.30UQ_SHSXKo5RBxj716FDBs0VqVKOC-bSNLBrs'
+api_key = 'b3c0c44ccc6b3c4e50d05d48b342e2b3'
 client = discord.Client(intents=discord.Intents.all())
 command_prefix = '!cat'
 
 @client.event
 async def on_ready():
-    await client.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name='!cat'))
+    await client.change_presence(activity=discord.Activity(type=discord.ActivityType.playing, name='!cat'))
 
 @client.event
 async def on_message(message):
@@ -61,7 +61,19 @@ async def on_message(message):
         embed.add_field(name="Plan my trip",value='I Plan your trip',inline=True)
         # sending the embed
         await message.channel.send(embed=embed)
+    elif message.author != client.user and message.content.startswith(command_prefix+" help"):
+        if len(message.content.replace("!cat help", '')) >= 1:
+            x=message.content.replace("!cat help", '')
+            print(x)
+            await message.channel.send(embed=messages.help(x))
+        else:
+            await message.channel.send(embed=messages.helpM())
+
+        
+        
+        
     
+        
 
 
 client.run(token)

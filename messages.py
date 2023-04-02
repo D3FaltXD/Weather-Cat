@@ -41,3 +41,113 @@ def gpt():
         "https://media.tenor.com/lPuo1Txt2vEAAAAS/huh-scare.gif"
         ]
     return ["meow "*random.randint(5,50), choice[random.randint(0,len(choice)-1)]]
+
+def helpM():
+    message= discord.Embed(
+        title='Cat\'s here to help',
+        color=color
+    )
+    message.add_field(
+        name="Prefix",
+        value="`!cat`",
+        inline=False
+    )
+    message.add_field(
+        name="About Me",
+        value="`hi`",
+        inline=True
+    )
+    message.add_field(
+        name="Help!",
+        value="`help`",
+        inline=True
+    )
+    message.add_field(
+        name="Weather Condition",
+        value="`weather`",
+        inline=False
+    )
+    message.add_field(
+        name="Air Quality Index",
+        value="`AQI`",
+        inline=True
+    )
+    message.add_field(
+        name="Plan My Trip",
+        value="`PMT`",
+        inline=True
+    )
+    message.add_field(
+        name="Cat GPT",
+        value="`gpt`",
+        inline=False
+    )
+    
+    return message
+
+
+def help(message):
+    if(message.lower()=="hi"):
+        message=discord.embeds(
+            title=message.title(),
+            desciption="""
+            You can learn more about me with this command!
+            usage: `!cat hi`
+            """,
+            color=color
+            )
+        return message
+    elif(message.lower()=="help"):
+        return discord.embeds(
+            title=message.title(),
+            desciption="""
+            learn about all the commands!
+            usage: `!cat help [command name](optional)`
+            """,
+            color=color
+            )
+    elif(message.lower()=="weather"):
+        return discord.embeds(
+            title=message.title(),
+            desciption="""
+            Current weather condition and more!
+            usage: `!cat weather [Place Name]`
+            """,
+            color=color
+            )
+    elif(message.lower()=="AQI"):
+        return discord.embeds(
+            title=message.title(),
+            desciption="""
+            learn about current Air Quality Index!
+            usage: `!cat aqi [place name]`
+            """,
+            color=color
+            )
+    elif(message.lower()=="pmt"):
+        return discord.embeds(
+            title=message.title(),
+            desciption="""
+            within the next 7 days, let me check if the date is good for your event!
+            usage: `!cat pmt [DD-MM]`
+            """,
+            color=color
+            )
+    elif(message.lower()=="gpt"):
+        return discord.embeds(
+            title=message.title(),
+            desciption="""
+            The most advanced version of CAT GPT!
+            usage: `!cat gpt [your question]`
+            """,
+            color=color
+            )
+    else:
+        return discord.embeds(
+            title=message.title(),
+            desciption="""
+            Sorry didn't understand that command.
+            Use `help` to get list of all commands.
+            """,
+            color=color
+            )
