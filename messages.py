@@ -1,7 +1,7 @@
 import discord
 import random
 
-color= 0xB200FF
+color= 0xAD91FF
 
 def intro():
     message="""
