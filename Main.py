@@ -3,6 +3,7 @@ import requests
 import json
 import os
 import messages
+import flames
 from webserver import keep_alive
 from weather import *
 
@@ -67,6 +68,11 @@ async def on_message(message):
                 await message.channel.send(embed=error_message(location))
   elif message.author != client.user and "ca" in message.content.split(" ") or "CA" in message.content.split(" "):
       await message.channel.send("<@" + str(291599151454486529) + ">")
+  elif message.author != client.user and message.content.startswith(command_prefix+" flames"):
+      l=message.content.replace("! cat flames ","")
+      l.split(",")
+      await message.channel.send(l[0]+" 🔥 "+l[1])
+      await message.channel.send(flames.flames(l[0],l[1]))
       
   
   
